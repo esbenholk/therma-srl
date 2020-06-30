@@ -154,6 +154,36 @@ function therma_scripts() {
 	}
 }
 
+function create_posttype() {
+    register_post_type( 'Services',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Services' ),
+                'singular_name' => __( 'Service' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'services'),
+            'show_in_rest' => true,
+ 
+        )
+    );
+}
+add_action( 'init', 'create_posttype' );
+
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+ 
+function add_my_post_types_to_query( $query ) {
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'post', 'Services' ) );
+    return $query;
+}
+
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
 
 add_action( 'wp_enqueue_scripts', 'therma_scripts' );
 

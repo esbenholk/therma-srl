@@ -9,9 +9,9 @@
 
 ?>
 
-<article class="teaser-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="teaser-container">
-    <img class="arrow" id="left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
+<article class="teasers-container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="teaser-item">
+    <img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
         
         <div class="text-box">
             <header class="entry-header">
@@ -47,7 +47,7 @@
 
         </div>
         
-        <img class="arrow" id="right" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
+        <img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
 
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -17,58 +17,44 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<div id="news-rotation">
-			<div class="lines">
-				<div class="line red"></div>
-				<div class="line purple"></div>
-				<div class="line blue"></div>
-			</div>
-		
-		<?php query_posts('posts_per_page=5'); ?>
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-					<?php
-				endif;
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-					?>
-		
-						<?php get_template_part( 'template-parts/teaser', get_post_type() ); ?>
-				
-				<?php
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				
-
-			endwhile;
+	<div id="news-modul">
+			<div id="news-rotation">
+				<div class="lines">
+					<div class="line red"></div>
+					<div class="line purple"></div>
+					<div class="line blue"></div>
+				</div>
 			
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
+				<?php 
+                        $args = array( 'post_type' => 'post', 'posts_per_page' => 10 );
+                        $the_query = new WP_Query( $args ); 
+                        $loop = new WP_Query( $args );
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                            get_template_part( 'template-parts/teaser', get_post_type() );
+                        endwhile;
+                    ?>
+		</div>
+		<div class="news-index-indicator buttons" ></div>
 	</div>
-	<div id="circle-buttons">
-		<!-- <button id="dot0" type="button" class="circlebutton on" name="picpress"></button>
-		<button id="dot1" type="button" class="circlebutton" name="picpress"></button>
-		<button id="dot2" type="button" class="circlebutton" name="picpress"></button> -->
+
+	<div id="services-modul">
+		<div id="services-rotation">
+				<?php 
+					$args = array( 'post_type' => 'services', 'posts_per_page' => 10 );
+					$the_query = new WP_Query( $args ); 
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post();
+						get_template_part( 'template-parts/service', get_post_type() );
+					endwhile;
+				?>
+		</div>
+		<div class="services-index-indicator buttons" ></div>
 	</div>
+
+	
+	
+
+		
 	</main><!-- #main -->
 
 <?php
