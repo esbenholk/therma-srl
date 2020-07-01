@@ -33,7 +33,7 @@
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
+		// siteNavigation.classList.toggle( 'toggled' );
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -98,4 +98,23 @@
 	}
 
 
-}() );
+	jQuery("#download-menu-button").click(function() {
+		console.log("header click");
+
+		jQuery('html,body').animate({
+			scrollTop: jQuery("#download-modul").offset().top},
+			'slow');
+	});
+	jQuery("#download-menu-button-footer").click(function() {
+		console.log("footer click");
+		
+		jQuery('html,body').animate({
+			scrollTop: jQuery("#download-modul").offset().top},
+			'slow');
+	});
+
+
+	
+
+
+}(jQuery) );

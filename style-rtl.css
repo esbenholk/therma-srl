@@ -660,7 +660,6 @@ textarea {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: right;
 	position: absolute;
 	top: 100%;
@@ -700,7 +699,7 @@ textarea {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	display: none;
 }
 
 @media screen and (min-width: 37.5em) {

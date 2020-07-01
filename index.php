@@ -16,41 +16,25 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+	
+	<div id="news-header">
+		<div id="news-headline" class="page-modul"></div>
+		<img class="news-background-cover" src="../wp-content/themes/THERMA-theme/assets/anistontarotpic.jpg" >
+	</div>
 
-	<div id="news-modul">
-			<div id="news-rotation">
-				<div class="lines">
-					<div class="line red"></div>
-					<div class="line purple"></div>
-					<div class="line blue"></div>
-				</div>
-			
+	<div id="news-page" class="page-modul">
 				<?php 
-                        $args = array( 'post_type' => 'post', 'posts_per_page' => 10 );
+                        $args = array( 'post_type' => 'post', 'orderby' => 'date', 'posts_per_page' => 10 );
                         $the_query = new WP_Query( $args ); 
-                        $loop = new WP_Query( $args );
-                        while ( $loop->have_posts() ) : $loop->the_post();
-                            get_template_part( 'template-parts/teaser', get_post_type() );
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post();
+                            get_template_part( 'template-parts/news-teaser', get_post_type() );
                         endwhile;
-                    ?>
+                ?>
 		</div>
-		<div class="news-index-indicator buttons" ></div>
 	</div>
 
-	<div id="services-modul">
-		<div id="services-rotation">
-				<?php 
-					$args = array( 'post_type' => 'services', 'posts_per_page' => 10 );
-					$the_query = new WP_Query( $args ); 
-					$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) : $loop->the_post();
-						get_template_part( 'template-parts/service', get_post_type() );
-					endwhile;
-				?>
-		</div>
-		<div class="services-index-indicator buttons" ></div>
-	</div>
-
+	
 	
 	
 
@@ -58,5 +42,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

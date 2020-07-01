@@ -7,6 +7,9 @@
  * @package THERMASRL
  */
 
+
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -30,7 +33,7 @@ if ( ! function_exists( 'therma_setup' ) ) :
 		load_theme_textdomain( 'therma', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		// add_theme_support( 'automatic-feed-links' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -144,15 +147,30 @@ add_action( 'widgets_init', 'therma_widgets_init' );
  */
 function therma_scripts() {
 	wp_enqueue_style( 'therma-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'therma-style', 'rtl', 'replace' );
+	// wp_style_add_data( 'therma-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'therma-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'therma-carousel', get_template_directory_uri() . '/js/carousel.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'therma-downloadIcons', get_template_directory_uri() . '/js/downloads.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'therma-news-organiser', get_template_directory_uri() . '/js/news-organiser.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+
+
+
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 }
+function my_scripts_method() {
+	// register your script location, dependencies and version
+	   wp_register_script('custom_script',
+	   get_template_directory_uri() . '/js/navigation.js',
+	   array('jquery'),
+	   '1.0' );
+	 // enqueue the script
+	  wp_enqueue_script('custom_script');
+}
+add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 function create_posttype() {
     register_post_type( 'Services',

@@ -19,8 +19,13 @@ get_header();
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'therma' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'therma' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle"></span> <span class="nav-title">
+					<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
+					</span>',
+					'next_text' => '<span class="nav-subtitle"></span> <span class="nav-title">
+					<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
+
+					</span>',
 				)
 			);
 
@@ -32,5 +37,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

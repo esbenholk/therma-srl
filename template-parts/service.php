@@ -1,9 +1,9 @@
-<article class="services-container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left-white.svg" />
+<article class="services-container container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="service-item">
-        
-        <div class="service-text-box">
+    <div class="service-item item">
+    <img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left-white.svg" />
+
+        <div class="service-text-box text-box">
             <header class="entry-header">
                 <?php
                 if ( is_singular() ) :
@@ -38,9 +38,9 @@
             </div><!-- .entry-content -->
 
         </div>
-    
+        <img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right-white.svg" />
+
     </div>
-    <img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right-white.svg" />
 
 </article><!-- #post-<?php the_ID(); ?> -->
 

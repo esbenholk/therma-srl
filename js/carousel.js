@@ -1,6 +1,10 @@
 ( function() {
     toggleCarousel("services-modul", "services-container", "services-index-indicator", false);
+    
     toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
+
+    toggleCarousel("red-news-modul", "red-news-container", "red-news-index-indicator", false);
+
     
     
     function toggleCarousel(modul, classname, bContainer, rotate){
@@ -71,6 +75,7 @@
         }
 
         if(pics.length>1){
+           
             let leftArrows = element.getElementsByClassName("left");    
             Array.from(leftArrows).forEach(function(element) {
                 element.addEventListener('click', changeNewsDown);
@@ -81,6 +86,7 @@
                 element.addEventListener('click', changeNewsUp);
             });
         } else {
+            buttons[0].style.display = "none";
             let leftArrows = element.getElementsByClassName("left");    
             Array.from(leftArrows).forEach(function(element) {
                 element.style.display = "none";

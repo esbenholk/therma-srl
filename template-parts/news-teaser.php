@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * Template part for displaying posts
@@ -9,7 +11,7 @@
 
 ?>
 
-<article class="page-modul" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
 		therma_posted_on();
@@ -28,8 +30,10 @@
 
 	<div class="entry-content">
 		<?php
-		the_content(
+		the_excerpt(
 		);
+
+
 		?>
 	</div><!-- .entry-content -->
 
