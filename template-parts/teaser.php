@@ -16,7 +16,7 @@
         <div class="text-box left-align">
             <header class="entry-header">
                 <?php
-               therma_posted_on();
+            
                 if ( is_singular() ) :
                     the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
@@ -28,6 +28,7 @@
                     ?>
                   
                 <?php endif; ?>
+                <?php therma_posted_on(); ?>
             </header><!-- .entry-header -->
                     
             <?php therma_post_thumbnail(); ?>

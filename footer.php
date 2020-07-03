@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="footer-modul" class="site-footer">
+	<footer id="footer-modul" class="site-footer modul">
 		<div class="site-info">
 		<nav id="footer-navigation" class="footer-navigation">
 		
@@ -26,7 +26,7 @@
 			<ul id="download-menu-button-footer" > Download </ul>
 
 			<ul>
-				<a href="/area-utenti">Accedi all' Area Utenti</a>
+				<a href="/area-utenti" class="alert-button">Area Utenti</a>
 			</ul>
 		</nav><!-- #site-navigation -->
 
@@ -40,7 +40,6 @@
             <?php
                 endwhile; // End of the loop.
             ?>
-
 
 			
 		</div><!-- .site-info -->

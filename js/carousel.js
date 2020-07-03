@@ -1,9 +1,15 @@
 ( function() {
-    toggleCarousel("services-modul", "services-container", "services-index-indicator", false);
-    
-    toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
 
-    toggleCarousel("red-news-modul", "red-news-container", "red-news-index-indicator", false);
+    if(window.location.pathname === "/" || window.location.pathname === ""){
+        toggleCarousel("services-modul", "services-container", "services-index-indicator", false);
+    
+        toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
+    
+        toggleCarousel("red-news-modul", "red-news-container", "red-news-index-indicator", false);
+        // toggleCarousel("download-modul", "none", "none", false);
+    
+    }
+   
 
     
     

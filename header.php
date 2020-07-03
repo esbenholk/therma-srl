@@ -43,7 +43,7 @@
 			</ul>
 		
 			<ul>
-				<a class="alert-button" href="/area-utenti">Accedi all' Area Utenti</a>
+				<a class="alert-button" href="/area-utenti">Area Utenti</a>
 			</ul>
 		
 		</nav><!-- #site-navigation -->

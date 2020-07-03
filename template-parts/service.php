@@ -7,9 +7,9 @@
             <header class="entry-header">
                 <?php
                 if ( is_singular() ) :
-                    the_title( '<h1 class="service-title">', '</h1>' );
+                    the_title( '<h1 class="service-title thin-headline">', '</h1>' );
                 else :
-                    the_title( '<h2 class="service-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                    the_title( '<h2 class="service-title thin-headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
                 endif;
 
                 if ( 'post' === get_post_type() ) :

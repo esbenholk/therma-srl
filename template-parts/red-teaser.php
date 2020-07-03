@@ -10,28 +10,33 @@
 ?>
 
 <article class="red-news-container container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php $image = get_field( 'image' ); ?>
+    <?php if ( $image ) : ?>
+        <img class="background-image" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+        <div class="red-overlay"></div>
+    <?php endif; ?>
     <div class="red-news-item item">
     <img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left-white.svg" />
         
-        <div class="text-box">
+        <div class="text-box red-news">
             <header class="entry-header">
                 <?php
                therma_posted_on();
                 if ( is_singular() ) :
-                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                    the_title( '<h2 class="throw-shadow entry-title red-news-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
                 else :
-                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                    the_title( '<h2 class="throw-shadow entry-title red-news-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
                 endif;
 
                 if ( 'post' === get_post_type() ) :
                     ?>
-                    <div class="entry-meta">
+                    <div class="entry-meta throw-shadow">
                     </div><!-- .entry-meta -->
                 <?php endif; ?>
             </header><!-- .entry-header -->
                     
-            <?php therma_post_thumbnail();  ?>
-            <?php the_excerpt(); ?>
+         
+            <?php the_excerpt('<p class="throw-shadow >', '</p>'); ?>
        
         
             <div class="entry-content">

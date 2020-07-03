@@ -53,7 +53,7 @@ get_header();
 
             <div id="service-area-link-modul">
             
-                <h1 class="service-area-link-headline"> <?php the_field( 'headline_parapgraph' ); ?> </h1>
+                <h1 class="service-title thin-headline button-title"> <?php the_field( 'headline_parapgraph' ); ?> </h1>
                
                 <a class="alert-button" href="<?php echo esc_url( $button_url); ?>"> <?php the_field( 'button_text' ); ?></a>
 
@@ -66,20 +66,28 @@ get_header();
 
         </div>
 
-        <div id="icon-modul">
-                 <div class="lines">
-					<div class="line red"></div>
-					<div class="line purple"></div>
-					<div class="line blue"></div>
+        <div id="icon-modul-container" class="modul">
+            
+            <div id="icon-modul">
+                <div class="lines" style="padding-right:2px;">
+                    <div class="line red"></div>
+                    <div class="line purple"></div>
+                    <div class="line blue"></div>
                 </div>
-            <div>
-            <img class="logo" src="../wp-content/themes/THERMA-theme/assets/logo.svg" />
 
-            <p class="logo-text text-box"> <?php the_field( 'headline_parapgraph' ); ?> </p>
+                <div>
+                    <img class="logo"src="../wp-content/themes/THERMA-theme/assets/logo.svg" />
+                </div>
+
+                <div class="lines">
+                </div>
+            
             </div>
-            <div class="lines">
+
+            <div class="centering item">
+                <h1 clasS="about-headline"><?php the_title(); ?></h1>
+                <?php the_content('<p class="about>', '</p>'); ?>
             </div>
-          
         </div>
 
         <div id="red-news-modul" class="modul">
