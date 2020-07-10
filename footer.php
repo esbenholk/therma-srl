@@ -12,37 +12,22 @@
 ?>
 
 	<footer id="footer-modul" class="site-footer modul">
-		<div class="site-info">
-		<nav id="footer-navigation" class="footer-navigation">
-		
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-			?>
-			<ul id="download-menu-button-footer" > Download </ul>
+	
+			<nav id="footer-navigation" class="footer-navigation">
 
-			<ul>
-				<a href="/area-utenti" class="alert-button">Area Utenti</a>
-			</ul>
-		</nav><!-- #site-navigation -->
-
-		<?php
-                while ( have_posts() ) :
-                the_post();
-            ?>
-			<p class="logo-text text-box"> <?php the_field( 'headline_parapgraph' ); ?> </p>
-
-        
-            <?php
-                endwhile; // End of the loop.
-            ?>
+				<a href="/area-utenti" class="alert-button mobile-only">Area Utenti</a>
+				<?php
+					get_sidebar();
+				?>
+				<!-- <a id="download-menu-button-footer" > Download </a> -->
 
 			
-		</div><!-- .site-info -->
+				
+			</nav><!-- #site-navigation -->
+
+		
+
+			
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

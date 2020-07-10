@@ -54,6 +54,7 @@ if ( ! function_exists( 'therma_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'therma' ),
+				'menu-2' => esc_html__( 'Secondary', 'therma' ),
 			)
 		);
 

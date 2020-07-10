@@ -28,7 +28,7 @@
 		</a>
 
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation row">
 		
 			<?php
 				wp_nav_menu(

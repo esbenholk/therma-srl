@@ -10,24 +10,24 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main news-article">
 		<?php
 		while ( have_posts() ) :
 			the_post();
+			the_post_navigation(
+				array(
+					'next_text' => '
+					<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
+					',
+					'prev_text' => '
+					<img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
+				'					
+				)
+			);
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle"></span> <span class="nav-title">
-					<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
-					</span>',
-					'next_text' => '<span class="nav-subtitle"></span> <span class="nav-title">
-					<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
-
-					</span>',
-				)
-			);
+			
 
 
 
