@@ -16,7 +16,7 @@
         <div class="red-overlay"></div>
     <?php endif; ?>
     <div class="red-news-item item">
-    <img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left-white.svg" />
+    <img class="arrow left bigger-space-arrow-left" src="https://www.thermasrl.com/wp-content/uploads/2020/08/left-white.svg" />
         
         <div class="text-box red-news">
             <header class="entry-header">
@@ -52,7 +52,7 @@
 
         </div>
         
-        <img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right-white.svg" />
+        <img class="arrow right bigger-space-arrow-right" src="https://www.thermasrl.com/wp-content/uploads/2020/08/right-white.svg" />
 
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->

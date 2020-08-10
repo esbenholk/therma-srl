@@ -154,6 +154,8 @@ function therma_scripts() {
 	wp_enqueue_script( 'therma-carousel', get_template_directory_uri() . '/js/carousel.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'therma-downloadIcons', get_template_directory_uri() . '/js/downloads.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'therma-news-organiser', get_template_directory_uri() . '/js/news-organiser.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'therma-calc-servie-height', get_template_directory_uri() . '/js/service_height_calculater.js', array(), _S_VERSION, true );
+
 
 
 

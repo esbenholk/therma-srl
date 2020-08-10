@@ -33,7 +33,8 @@ get_header();
 		<div id="news-header">
 			<?php if ( $image ) : ?>
 				<div id="news-headline" class="page-modul">
-				<p>NEWS</p></div>
+				<p id="News">NEWS</p>
+				</div>
 				<img class="news-background-cover" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
 				<div class="red-overlay"></div>
 			<?php endif; ?>

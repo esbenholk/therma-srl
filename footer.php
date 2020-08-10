@@ -14,19 +14,21 @@
 	<footer id="footer-modul" class="site-footer modul">
 	
 			<nav id="footer-navigation" class="footer-navigation">
+				<a href="http://gestionale.thermasrl.com/therma/login" class="footer-alert-button mobile-only">Area Utenti</a>
 
-				<a href="/area-utenti" class="alert-button mobile-only">Area Utenti</a>
+				<a id="download-menu-button-footer" class="mobile-only" > Downloads </a>
 				<?php
-					get_sidebar();
+					get_sidebar("",'<button id="download-menu-button-footer" >Download</button>');
 				?>
-				<!-- <a id="download-menu-button-footer" > Download </a> -->
+				
+				
 
 			
 				
 			</nav><!-- #site-navigation -->
 
 		
-
+		
 			
 	</footer><!-- #colophon -->
 </div><!-- #page -->

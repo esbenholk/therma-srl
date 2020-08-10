@@ -1,25 +1,31 @@
 ( function() {
 
     if(window.location.pathname === "/" || window.location.pathname === ""){
+        toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
+
+        
         toggleCarousel("services-modul", "services-container", "services-index-indicator", false);
     
-        toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
     
         toggleCarousel("red-news-modul", "red-news-container", "red-news-index-indicator", false);
-        // toggleCarousel("download-modul", "none", "none", false);
     
     }
-   
-
-    
-    
+  
     function toggleCarousel(modul, classname, bContainer, rotate){
         let element = document.getElementById(modul);
         var pics = element.getElementsByClassName(classname);
+        
+
         pics[0].classList.add("onscreen");
+        if(!rotate){
+           pics[0].classList.add("first");
+        } 
+
+        
 
         createButtons(bContainer);
         function createButtons(bContainer){
+            console.log(modul, pics)
             for (var b = 0; b < pics.length; b++) {
                 let button = document.createElement("button");
                 if(b===0){
@@ -61,6 +67,9 @@
         }
 
         function rotation(arg) {
+            
+            pics[current].classList.remove("first");
+        
             currentlyTransitioning = true;
             pics[current].classList.remove("onscreen");
             pics[current].classList.add("offscreen");
@@ -106,6 +115,7 @@
         }
 
         function changeNewsUp(){
+            pics[current].classList.remove("first");
             currentlyTransitioning = true;
             pics[current].classList.remove("onscreen");
             pics[current].classList.add("offscreen");
@@ -124,6 +134,7 @@
         }
 
         function changeNewsDown(){
+            pics[current].classList.remove("first");
             currentlyTransitioning = true;
             pics[current].classList.remove("onscreen");
             pics[current].classList.add("offscreen");

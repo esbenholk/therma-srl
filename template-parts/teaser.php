@@ -11,31 +11,32 @@
 
 <article class="teasers-container container" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="teaser-item item">
-    <img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
+    <img class="arrow left" src="https://www.thermasrl.com/wp-content/uploads/2020/08/left.svg" />
         
-        <div class="text-box left-align">
-            <header class="entry-header">
+        <div class="news-box">
+            <header class="news-entry-header">
+                
                 <?php
-            
+                therma_posted_on();
                 if ( is_singular() ) :
-                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-
+                    the_title( '<h2 class="news-entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
                 else :
-                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                    the_title( '<h2 class="news-entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
                 endif;
 
-                if ( 'post' === get_post_type() ) :
-                    ?>
+                
+                ?>
                   
-                <?php endif; ?>
-                <?php therma_posted_on(); ?>
+             
             </header><!-- .entry-header -->
                     
-            <?php therma_post_thumbnail(); ?>
-       
-            
+            <?php the_excerpt('<p class="excerpt">', '</p>'); 
+            ?>
 
-            <div class="entry-content">
+            <a class="readmore" href="<?php the_permalink(); ?>">read more</a>
+  
+
+            <div class="news-entry-content">
                 <?php
                 wp_link_pages(
                     array(
@@ -48,7 +49,7 @@
 
         </div>
         
-        <img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
+        <img class="arrow right" src="https://www.thermasrl.com/wp-content/uploads/2020/08/right.svg" />
 
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->

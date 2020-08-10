@@ -23,9 +23,11 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 	<header id="masthead" class="site-header">
-		<a href="/">
-			<img class="logo" src="../wp-content/themes/THERMA-theme/assets/logo.svg" />
+		<a class="limited-link"  href="/">
+		
+		<img class="style-svg logo" src="https://www.thermasrl.com/wp-content/uploads/2020/08/logo.svg"/>
 		</a>
+
 
 
 		<nav id="site-navigation" class="main-navigation row">
@@ -39,11 +41,11 @@
 				);
 			?>
 			<ul>
-			<button id="download-menu-button" >Download</button>
+			<button id="download-menu-button" >Downloads</button>
 			</ul>
 		
 			<ul>
-				<a class="alert-button" href="/area-utenti">Area Utenti</a>
+				<a class="alert-button" href="http://gestionale.thermasrl.com/therma/login">Area Utenti</a>
 			</ul>
 		
 		</nav><!-- #site-navigation -->

@@ -22,7 +22,7 @@ function therma_custom_header_setup() {
 		apply_filters(
 			'therma_custom_header_args',
 			array(
-				'default-image'      => '',
+				'default-image'      => '../wp-content/themes/THERMA-theme/assets/logo.svg',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,

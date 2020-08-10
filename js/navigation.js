@@ -99,18 +99,33 @@
 
 
 	jQuery("#download-menu-button").click(function() {
-		console.log("header click");
-
-		jQuery('html,body').animate({
-			scrollTop: jQuery("#download-modul").offset().top},
-			'slow');
+		
+		if(window.location.pathname === "/" || window.location.pathname === ""){
+			jQuery('html,body').animate({
+				scrollTop: jQuery("#downloads").offset().top},
+				'slow');
+		
+		}else {
+			window.location.href = "/#downloads";
+			jQuery('html,body').animate({
+				scrollTop: jQuery("#downloads").offset().top},
+				'slow');
+		}
+			
 	});
 	jQuery("#download-menu-button-footer").click(function() {
-		console.log("footer click");
+		if(window.location.pathname === "/" || window.location.pathname === ""){
+			jQuery('html,body').animate({
+				scrollTop: jQuery("#downloads").offset().top},
+				'slow');
 		
-		jQuery('html,body').animate({
-			scrollTop: jQuery("#download-modul").offset().top},
+		}
+		else {
+			window.location.href = "/#downloads";
+			jQuery('html,body').animate({
+				scrollTop: jQuery("#downloads").offset().top},
 			'slow');
+		}
 	});
 
 

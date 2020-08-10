@@ -7,9 +7,9 @@
     for(let i = 0; i < newsArray.length; i++){
         if(i===0){
             newsArray[i].classList.add("throw-shadow")
-            Array.from(newsArray[i].getElementsByTagName("p")).forEach(function(item) {
-                item.style.display ="none";
-             });
+            // Array.from(newsArray[i].getElementsByTagName("p")).forEach(function(item) {
+            //     item.style.display ="none";
+            //  });
             
             newsHeadline.appendChild(newsArray[i]);
         } 

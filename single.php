@@ -17,10 +17,10 @@ get_header();
 			the_post_navigation(
 				array(
 					'next_text' => '
-					<img class="arrow left" src="../wp-content/themes/THERMA-theme/assets/left.svg" />
+					<img class="arrow left" src="https://www.thermasrl.com/wp-content/uploads/2020/08/left.svg" />
 					',
 					'prev_text' => '
-					<img class="arrow right" src="../wp-content/themes/THERMA-theme/assets/right.svg" />
+					<img class="arrow right" src="https://www.thermasrl.com/wp-content/uploads/2020/08/right.svg" />
 				'					
 				)
 			);
