@@ -908,7 +908,7 @@ body{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 75%;
+	max-width: 90%;
 	z-index: 10;
 }
 
@@ -1007,7 +1007,7 @@ icon lines*/
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-width: 500px;
+	max-width: 700px;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -1027,7 +1027,9 @@ icon lines*/
 .arrow:hover{
 	opacity: 1;
 }
-
+.to-top{
+	transform: rotate(90deg);
+}
 .left{
 	float: left;
 }
@@ -1192,7 +1194,7 @@ texts */
 
 .news-box{
 	min-width: 200px;
-	max-width: 500px;
+	max-width: 800px;
 	text-align: center;
 	margin-left: var(--regMargin);
 	margin-right: var(--regMargin);
@@ -1400,6 +1402,10 @@ modules
 	position: relative;
 	bottom: 0;
 	padding: var(--regMargin);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
 
 }
 .site-footer{
@@ -1412,7 +1418,7 @@ modules
 	margin-top: var(--minMargin)
 }
 .footer-navigation{
-	width: auto;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -1679,10 +1685,15 @@ aside{
 	}
 
 	#footer-modul{
-		height: 90vh;
+		height: 70vh;
+	}
+	.to-top{
+		position: absolute;
+		bottom: var(--regMargin);
+		right: var(--regMargin)
 	}
 	.page-modul{
-		width: 75%;
+		width: 100%;
 		display: flex;
 		margin: 0;
 		padding: var(--regMargin);
@@ -1690,14 +1701,16 @@ aside{
 		display: inline-block;
 	}
 	.news-article{
-	
-		margin: var(--minMargin);
-
+		margin: var(--regMargin);
+		margin-bottom: var(--bigMargin);
+	}
+	.content p{
+		margin-bottom: var(--bigMargin);
 	}
 
 	.news-box{
 		min-width: 200px;
-		max-width: 500px;
+		max-width: 900px;
 		text-align: center;
 		margin-left: var(--minMargin);
 		margin-right: var(--minMargin);
@@ -1710,9 +1723,9 @@ aside{
 		color: var(--blue);
 	}
 	.page-modul-news{
-		margin-left: var(--minMargin);
-		margin-right: var(--minMargin);
-		width: 90%;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
 	}
 	.nav-links{
 		bottom: 0%;

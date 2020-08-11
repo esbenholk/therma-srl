@@ -77,7 +77,7 @@ get_header();
             <?php
                 endwhile; // End of the loop.
             ?>
-            <p class="note mobile-only"> text that indicates the link leads to site best for desktop</p>
+            <p class="note mobile-only">Il Portale è ottimizzato per desktop</p>
 
             </div>
 

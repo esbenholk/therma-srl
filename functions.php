@@ -148,7 +148,7 @@ add_action( 'widgets_init', 'therma_widgets_init' );
  */
 function therma_scripts() {
 	wp_enqueue_style( 'therma-style', get_stylesheet_uri(), array(), _S_VERSION );
-	// wp_style_add_data( 'therma-style', 'rtl', 'replace' );
+	wp_style_add_data( 'therma-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'therma-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'therma-carousel', get_template_directory_uri() . '/js/carousel.js', array(), _S_VERSION, true );

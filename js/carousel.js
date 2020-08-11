@@ -25,7 +25,6 @@
 
         createButtons(bContainer);
         function createButtons(bContainer){
-            console.log(modul, pics)
             for (var b = 0; b < pics.length; b++) {
                 let button = document.createElement("button");
                 if(b===0){
@@ -126,7 +125,6 @@
             } else {
                 current = 0;
             }
-            console.log(current);
 
             pics[current].classList.add("onscreen");
             buttons[current].classList.add("on");
@@ -145,7 +143,6 @@
             } else {
                 current = pics.length-1
             }
-            console.log(current);
 
             pics[current].classList.add("onscreen");
             buttons[current].classList.add("on");
