@@ -868,7 +868,7 @@ body{
 	  
 }
 .page-modul{
-	background-color:white;
+	/* background-color:white; */
 	width: 75%;
 	display: flex;
 	margin: 0;
@@ -925,7 +925,7 @@ body{
 .item{
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	max-width: 90%;
 	z-index: 10;

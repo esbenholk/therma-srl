@@ -33,19 +33,21 @@ get_header();
 				<p id="News">NEWS</p>
 				</div>
 				<img class="news-background-cover" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+
 				<div class="red-overlay"></div>
 			<?php endif; ?>
 		</div>
 		<div id="news-page" class="page-modul">
+
 					<?php 
 							$args = array( 'post_type' => 'post', 'orderby' => 'date', 'posts_per_page' => 10 );
 							$the_query = new WP_Query( $args ); 
 							$loop = new WP_Query( $args );
 							while ( $loop->have_posts() ) : $loop->the_post();
-							$image = get_field( 'image' );
 								get_template_part( 'template-parts/news-teaser', get_post_type() );
 							endwhile;
 					?>
+					
 			</div>
 		</div>
 		
