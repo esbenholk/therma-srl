@@ -69,9 +69,9 @@ get_header();
 
             <div id="service-area-link-modul">
             
-                <h1 class="service-title thin-headline button-title"> <?php the_field( 'headline_parapgraph' ); ?> </h1>
+                <h3 class="button-title thin-headline"> <?php the_field( 'headline_parapgraph' ); ?> </h3>
                
-                <a class="alert-button" href="<?php echo esc_url( $button_url); ?>"> <?php the_field( 'button_text' ); ?></a>
+                <a class="alert-button alert-button-bigger" href="<?php echo esc_url( $button_url); ?>"> <?php the_field( 'button_text' ); ?></a>
 
 
             <?php
@@ -92,9 +92,9 @@ get_header();
                     <div class="line blue"></div>
                 </div>
 
-                
+                <div class="svg-wrapper">
                 <img class="style-svg logo" src="https://www.thermasrl.com/wp-content/uploads/2020/08/logo.svg"/>
-        
+                </div>
                 <div class="lines">
                 </div>
             
@@ -121,8 +121,9 @@ get_header();
             <div class="red-news-index-indicator buttons" ></div>
             
         </div>
+       
         <div id="downloads" class="modul">
-
+                            
         <?php
             while ( have_posts() ) :    
             the_post(); 
@@ -142,14 +143,16 @@ get_header();
                 ?>
            </div>
         </div>
+       
 
 
 
 
-
+        <div class="bottom-cover"></div>
 </main><!-- #main -->
 
 <?php
 // get_sidebar();
 get_footer();
 ?>
+

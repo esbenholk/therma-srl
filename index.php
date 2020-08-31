@@ -16,7 +16,26 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main news-site">
-
+	
+		
+					<?php 
+							$args = array( 'post_type' => 'post', 'orderby' => 'date', 'posts_per_page' => 10 );
+							$the_query = new WP_Query( $args ); 
+							$loop = new WP_Query( $args );
+							while ( $loop->have_posts() ) : $loop->the_post();
+							$image = get_field( 'image' );
+							endwhile;
+					?>
+		
+		<div id="news-header">
+			<?php if ( $image ) : ?>
+				<div id="news-headline" class="page-modul">
+				<p id="News">NEWS</p>
+				</div>
+				<img class="news-background-cover" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+				<div class="red-overlay"></div>
+			<?php endif; ?>
+		</div>
 		<div id="news-page" class="page-modul">
 					<?php 
 							$args = array( 'post_type' => 'post', 'orderby' => 'date', 'posts_per_page' => 10 );
@@ -30,15 +49,7 @@ get_header();
 			</div>
 		</div>
 		
-		<div id="news-header">
-			<?php if ( $image ) : ?>
-				<div id="news-headline" class="page-modul">
-				<p id="News">NEWS</p>
-				</div>
-				<img class="news-background-cover" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-				<div class="red-overlay"></div>
-			<?php endif; ?>
-		</div>
+		
 
 		
 	</main><!-- #main -->

@@ -33,7 +33,7 @@
             <?php the_excerpt('<p class="excerpt">', '</p>'); 
             ?>
 
-            <a class="readmore" href="<?php the_permalink(); ?>">read more</a>
+            <a class="readmore" href="<?php the_permalink(); ?>">Leggi di più</a>
   
 
             <div class="news-entry-content">

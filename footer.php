@@ -24,9 +24,10 @@
 			<img class="arrow to-top" id="to-top" src="https://www.thermasrl.com/wp-content/uploads/2020/08/left-white.svg" />
 
 		
-		
+			
 			
 	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

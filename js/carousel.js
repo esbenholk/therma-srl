@@ -1,7 +1,12 @@
 ( function() {
 
     if(window.location.pathname === "/" || window.location.pathname === ""){
-        toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
+        if(document.getElementsByClassName("teaser-item").length > 1){
+            toggleCarousel("news-modul", "teasers-container", "news-index-indicator", true);
+        } else{
+            toggleCarousel("news-modul", "teasers-container", "news-index-indicator", false);
+        }
+        
 
         
         toggleCarousel("services-modul", "services-container", "services-index-indicator", false);
@@ -99,6 +104,9 @@
             Array.from(rightArrows).forEach(function(element) {
                 element.addEventListener('click', changeNewsUp);
             });
+            let htmlElements = document.getElementsByClassName(classname);
+           
+          
         } else {
             buttons[0].style.display = "none";
             let leftArrows = element.getElementsByClassName("left");    
@@ -110,6 +118,19 @@
             Array.from(rightArrows).forEach(function(element) {
                 element .style.display = "none";
             });
+            let htmlElements = document.getElementsByClassName(classname);
+           
+            if(htmlElements.length<2){
+                if(htmlElements[i] != "undefined"){
+                    for(let i=0; i<htmlElements.length; i++){
+                        let item =htmlElements[i].getElementsByClassName("item");
+                        item[0].style.justifyContent = "center"
+                    }
+                }
+           
+            }
+            
+           
         
         }
 
@@ -158,6 +179,8 @@
                 currentlyTransitioning = false;
             });
         }
+
+      
 
     }
   

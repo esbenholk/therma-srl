@@ -2,11 +2,13 @@
 
     if(window.location.pathname === "/" || window.location.pathname === ""){
      calculate_height("services-rotation");
+     calculate_height("news-rotation", "high");
      window.addEventListener('resize',calculate_height("services-rotation"));
     }
+  
     
   
-    function calculate_height(element){
+    function calculate_height(element, feature){
     
         let rotator = document.getElementById(element);
         let article = rotator.getElementsByTagName("article");
@@ -15,8 +17,14 @@
             heights.push(article[i].offsetHeight);
         }
         let heighest = Math.max(...heights);
+
+        if(!feature){
+            rotator.style.height = heighest + "px";
+        } else if(feature === "high"){
+            rotator.style.height = heighest + 50 +"px";
+        }
+   
         
-        rotator.style.height = heighest + "px";
      
     }
   
